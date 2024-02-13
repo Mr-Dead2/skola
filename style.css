@@ -1,16 +1,16 @@
-ul {
+#nav-bar {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #333;
-  }
+}
 
-li {
+#bar {
     float: left;
 }
 
-li a {
+#bar a {
     display: block;
     color: white;
     text-align: center;
@@ -19,6 +19,6 @@ li a {
 }
 
     
-li a:hover {
+#bar a:hover {
     background-color: #111;
 }
