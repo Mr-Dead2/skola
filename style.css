@@ -22,3 +22,10 @@
 #bar a:hover {
     background-color: #111;
 }
+
+
+
+h1 {
+    text-align: center;
+    color: darkgreen;
+}
