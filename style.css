@@ -36,3 +36,15 @@ img {
     border-radius: 4px;
     padding: 5px;
 }
+
+p {
+    color: darkred;
+}
+
+#list {
+    color: darkred;
+}
+
+h2 {
+    color: darkred;
+}
