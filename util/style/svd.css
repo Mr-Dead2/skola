@@ -22,3 +22,7 @@
 #barnav a:hover {
     background-color: #111;
 }
+
+main {
+    size: 200px;
+}
