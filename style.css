@@ -1,0 +1,180 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f4f4f4 0%, #e0e0e0 100%);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+header {
+    background: linear-gradient(90deg, #4CAF50, #45a049);
+    color: white;
+    padding: 2em 0;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+    h1 {
+        font-size: 50px;
+    }
+}
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main {
+    padding: 20px;
+}
+
+.dzivnikeu_kartis {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.iteam {
+    background: linear-gradient(to bottom, #ffffff 0%, #f9f9f9 100%);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 600px;
+    margin: 15px;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    position: relative;
+}
+
+.iteam::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #4CAF50, #45a049);
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.iteam:hover::before {
+    transform: scaleX(1);
+}
+
+.iteam:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    border: 2px solid rgba(76, 175, 80, 0.3);
+}
+
+.iteam h3 {
+    background-color: #4CAF50;
+    color: white;
+    margin: 0;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.5em;
+    transition: all 0.3s ease-in-out;
+}
+
+.iteam:hover h3 {
+    background-color: #45a049;
+    padding: 20px;
+}
+
+.iteam h2 {
+    color: #333;
+    margin: 15px;
+    text-align: center;
+    font-size: 1.8em;
+    transition: all 0.3s ease-in-out;
+}
+
+.iteam:hover h2 {
+    color: #4CAF50;
+    transform: scale(1.05);
+}
+
+.iteam p {
+    padding: 0 15px 15px;
+    color: #666;
+    font-size: 1.1em;
+    transition: all 0.3s ease-in-out;
+}
+
+.iteam:hover p {
+    color: #333;
+}
+
+.iteam img {
+    width: 100%;
+    height: auto;
+    transition: all 0.5s ease-in-out;
+    filter: brightness(0.95);
+}
+
+.iteam:hover img {
+    transform: scale(1.05);
+    filter: brightness(1.1) contrast(1.1);
+}
+
+.button1 {
+    display: inline-block;
+    background: linear-gradient(45deg, #4CAF50, #45a049);
+    color: white;
+    text-align: center;
+    padding: 8px 16px;
+    margin-left: 10px;  /* Add space between text and button */
+    text-decoration: none;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+    width: fit-content;
+    font-size: 0.9em;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.2);
+}
+
+.button1:hover {
+    background: linear-gradient(45deg, #45a049, #4CAF50);
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 6px 15px rgba(76, 175, 80, 0.3);
+}
+
+.text {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+
+/* Add smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Add a scrollbar style */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4CAF50;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #45a049;
+}
