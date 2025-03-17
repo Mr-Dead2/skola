@@ -1,17 +1,21 @@
 body {
-    font-family: Arial, sans-serif;
     background: linear-gradient(135deg, #f4f4f4 0%, #e0e0e0 100%);
     margin: 0;
     padding: 0;
     min-height: 100vh;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 20px;
+    font-style: normal;
+    font-size: 18px; /* Base font size increased */
 }
 
 html {
   width: 100%;
   height: 100%;
   overflow-x: hidden;
+  scroll-behavior: smooth; /* Add smooth scroll behavior */
 }
-
 
 header {
     background: linear-gradient(90deg, #4CAF50, #45a049);
@@ -22,8 +26,12 @@ header {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 
     h1 {
-        font-size: 50px;
+        font-size: 60px; /* Increased from 50px */
     }
+}
+
+header h2 {
+    font-size: 32px;
 }
 
 @keyframes fadeIn {
@@ -39,6 +47,40 @@ header {
 
 main {
     padding: 20px;
+}
+
+main h1 {
+    color: #333;
+    text-align: center;
+    font-size: 3em; /* Increased from 2.5em */
+    margin: 40px 0;
+    position: relative;
+    padding-bottom: 15px;
+    overflow: hidden; /* Add animation for main headings */
+    padding-bottom: 10px; /* Add animation for main headings */
+}
+
+main h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #4CAF50, #45a049);
+    border-radius: 2px;
+    background: linear-gradient(90deg, #4CAF50, transparent); /* Add animation for main headings */
+    animation: slideIn 2s ease-out forwards; /* Add animation for main headings */
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
 }
 
 .dzivnikeu_kartis {
@@ -90,7 +132,7 @@ main {
     margin: 0;
     padding: 15px;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.8em; /* Increased from 1.5em */
     transition: all 0.3s ease-in-out;
 }
 
@@ -103,7 +145,7 @@ main {
     color: #333;
     margin: 15px;
     text-align: center;
-    font-size: 1.8em;
+    font-size: 2.2em; /* Increased from 1.8em */
     transition: all 0.3s ease-in-out;
 }
 
@@ -115,7 +157,7 @@ main {
 .iteam p {
     padding: 0 15px 15px;
     color: #666;
-    font-size: 20px;
+    font-size: 22px; /* Increased from 20px */
     transition: all 0.3s ease-in-out;
 }
 
@@ -128,6 +170,16 @@ main {
     height: auto;
     transition: all 0.5s ease-in-out;
     filter: brightness(0.95);
+    animation: float 6s ease-in-out infinite; /* Add floating animation to images */
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 .iteam:hover img {
@@ -146,7 +198,7 @@ main {
     border-radius: 20px;
     transition: all 0.3s ease-in-out;
     width: fit-content;
-    font-size: 0.9em;
+    font-size: 1.1em; /* Increased from 0.9em */
     box-shadow: 0 4px 15px rgba(76, 175, 80, 0.2);
 }
 
@@ -159,7 +211,7 @@ main {
 .text {
     text-align: center;
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1.4em; /* Increased from 1.2em */
     margin: 20px 0;
 }
 
@@ -184,4 +236,281 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #45a049;
+}
+
+/* Table styles */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    animation: tableAppear 1s ease-out;
+    transform-origin: center;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: 18px; /* Added explicit font size */
+}
+
+@keyframes tableAppear {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+th {
+    background: linear-gradient(90deg, #4CAF50, #45a049);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    font-size: 1.2em; /* Added larger size for headers */
+}
+
+th::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    to {
+        left: 100%;
+    }
+}
+
+tr {
+    transition: all 0.3s ease;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+    transform: scale(1.01);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(76, 175, 80, 0.1); /* Add hover effects to table rows */
+}
+
+td:hover {
+    background-color: rgba(76, 175, 80, 0.1);
+}
+
+/* Add ripple effect to cells */
+td::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, rgba(76, 175, 80, 0.2) 0%, transparent 100%);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0;
+}
+
+td:active::after {
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+}
+
+/* Responsive table */
+@media screen and (max-width: 768px) {
+    table {
+        width: 95%;
+        transition: all 0.3s ease;
+    }
+    
+    th, td {
+        padding: 10px;
+    }
+    
+    tr:hover {
+        transform: scale(1.005);
+    }
+}
+
+/* Add this to your existing CSS */
+
+.lists-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 20px;
+    margin: 40px auto;
+    max-width: 1200px;
+}
+
+.list-section {
+    flex: 1;
+    min-width: 300px;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.list-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.list-section h2 {
+    color: #333;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #4CAF50;
+    font-size: 1.8em; /* Added explicit size */
+}
+
+.list-section ul, 
+.list-section ol {
+    padding-left: 20px;
+}
+
+.list-section li {
+    margin: 15px 0;
+    line-height: 1.6;
+    color: #444;
+    transition: all 0.3s ease;
+    font-size: 400; /* Added larger size for list items */
+    position: relative; /* Add animation to list items */
+    padding-left: 25px; /* Add animation to list items */
+}
+
+.list-section li::marker {
+    color: #4CAF50;
+}
+
+.list-section li::before {
+    content: '→'; /* Add animation to list items */
+    position: absolute; /* Add animation to list items */
+    left: 0; /* Add animation to list items */
+    opacity: 0; /* Add animation to list items */
+    transition: all 0.3s ease; /* Add animation to list items */
+}
+
+.list-section li:hover {
+    color: #4CAF50;
+    transform: translateX(10px);
+    transform: translateX(10px); /* Add animation to list items */
+}
+
+.list-section li:hover::before {
+    opacity: 1; /* Add animation to list items */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .lists-container {
+        flex-direction: column;
+    }
+    
+    .list-section {
+        min-width: auto;
+    }
+}
+
+.references-section {
+    background: white;
+    padding: 30px;
+    margin: 40px auto;
+    max-width: 1000px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.references-section h2 {
+    color: #333;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #4CAF50;
+    text-align: center;
+    font-size: 2em; /* Added explicit size */
+}
+
+.references-list {
+    padding-left: 20px;
+}
+
+.references-list li {
+    margin: 15px 0;
+    line-height: 1.6;
+    color: #444;
+    font-size: 1.2em; /* Added larger size */
+}
+
+.references-list a {
+    color: #4CAF50;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative; /* Add pulse animation to references links */
+}
+
+.references-list a::after {
+    content: ''; /* Add pulse animation to references links */
+    position: absolute; /* Add pulse animation to references links */
+    bottom: -2px; /* Add pulse animation to references links */
+    left: 0; /* Add pulse animation to references links */
+    width: 100%; /* Add pulse animation to references links */
+    height: 2px; /* Add pulse animation to references links */
+    background: #4CAF50; /* Add pulse animation to references links */
+    transform: scaleX(0); /* Add pulse animation to references links */
+    transition: transform 0.3s ease; /* Add pulse animation to references links */
+}
+
+.references-list a:hover::after {
+    transform: scaleX(1); /* Add pulse animation to references links */
+}
+
+.references-list a:hover {
+    color: #45a049;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .references-section {
+        margin: 20px;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 16px; /* Slightly smaller on mobile */
+    }
+    
+    header h1 {
+        font-size: 40px;
+    }
+    
+    header h2 {
+        font-size: 28px;
+    }
 }
