@@ -26,7 +26,7 @@ header {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 
     h1 {
-        font-size: 60px; /* Increased from 50px */
+        font-size: 45px; /* Increased from 50px */
     }
 }
 
@@ -401,7 +401,8 @@ td:active::after {
     transition: all 0.3s ease;
     font-size: 400; /* Added larger size for list items */
     position: relative; /* Add animation to list items */
-    padding-left: 25px; /* Add animation to list items */
+    padding-left: 25px;
+    font-weight: bold; /* Added bold font weight */
 }
 
 .list-section li::marker {
@@ -507,7 +508,7 @@ td:active::after {
     }
     
     header h1 {
-        font-size: 40px;
+        font-size: 35px;
     }
     
     header h2 {
